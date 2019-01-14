@@ -1,0 +1,3 @@
+.mu-scratch-custom-editor input[type="file"] {
+    display: none !important;
+}
