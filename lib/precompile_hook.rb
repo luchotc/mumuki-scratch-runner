@@ -4,14 +4,14 @@ class ScratchPrecompileHook < Mumukit::Templates::FileHook
   DEFAULT_TIMEOUT = 2
 
   structured true
-  isolated false
+  isolated true
 
   def tempfile_extension
     '.json'
   end
 
   def command_line(filename)
-    "scratch-cli #{filename} #{locale_argument} #{timeout_argument}"
+    "mulang-scratch #{filename} #{locale_argument} #{timeout_argument}"
   end
 
   def locale_argument
